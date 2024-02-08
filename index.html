@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Raihan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+    
+        <div class="row d-flex justify-content-center">
+            
+            <div class="col-md-7">
+                
+                <div class="card p-3 py-4">
+                    
+                    <div class="text-center">
+                        <img src="WhatsApp Image 2024-01-06 at 23.54.04_dce9311e.jpg" width="100" class="rounded-circle">
+                    </div>
+                    
+                    <div class="text-center mt-3">
+                        <span class="bg-secondary p-1 px-4 rounded text-white">Beginner</span>
+                        <h5 class="mt-2 mb-0">Muhammad Raihan</h5>
+                        <span>Front End Developer</span>
+                        
+                        <div class="px-4 mt-1">
+                            <p class="fonts">Saya pelajar siswa SMK Negri 7 Samarinda, Saya siswa kelas <br> 11 jurusan PPLG Pengembangan Perangkat Lunak & Gim.
+                        
+                        </div>
+                        
+                         <ul class="social-list">
+                            <a href="https://wa.me/+6282215316464">
+                                <li><i class="fa fa-whatsapp"></i></li>
+                            </a>
+                            <a href="https://www.instagram.com/muhraihannnn/">
+                                <li><i class="fa fa-instagram"></i></li>
+                            </a>
+                            <a href="https://open.spotify.com/user/31gmrzq6bzxfeasn4krofz6znofi">
+                                <li><i class="fa fa-spotify"></i></li>
+                            </a>
+                            <a href="https://www.linkedin.com/in/muhammad-raihan-90a045287/">
+                                <li><i class="fa fa-linkedin"></i></li>
+                            </a>
+                        </ul>
+                        
+                        <div class="buttons">
+                            <button class="btn btn-outline-primary px-4" id="messageBtn">Message</button>
+                        </div>
+                        
+                        <!-- Popup Pesan -->
+                        <div id="messagePopup" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <h2>Send Me Message</h2>
+                                <form action="https://api.web3forms.com/submit" method="POST" id="messageForm">
+                                    <input type="hidden" name="access_key" value="28a797eb-27d2-4406-a7dd-5fceaaf1877d">
+                                    <label for="name"><b>Nama:</b></label>
+                                    <input type="text" id="name" name="name" required><br>
+                                    <label for="email"><b>Your Email:</b></label>
+                                    <input type="email" id="email" name="email" required><br>
+                                    <label for="message"><b>Message:</b></label>
+                                    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                                    <button type="submit">Send</button>
+                                </form>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script>"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"</script>
+    <script>"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"</script>
+    <script>
+        // Dapatkan tombol "Message" dan popup
+var messageBtn = document.getElementById("messageBtn");
+var messagePopup = document.getElementById("messagePopup");
+
+// Dapatkan elemen span (x) yang menutup popup
+var closeBtn = document.getElementsByClassName("close")[0];
+
+// Saat tombol "Message" diklik, tampilkan popup
+messageBtn.onclick = function() {
+    messagePopup.style.display = "block";
+}
+
+// Saat pengguna mengklik (x), tutup popup
+closeBtn.onclick = function() {
+    messagePopup.style.display = "none";
+}
+
+// Saat pengguna mengklik di luar popup, tutup popup
+window.onclick = function(event) {
+    if (event.target == messagePopup) {
+        messagePopup.style.display = "none";
+    }
+}
+
+    </script>
+</body>
+</html>
