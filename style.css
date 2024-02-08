@@ -1,0 +1,162 @@
+body{
+    background:#eee;
+}
+
+.card{
+    border:none;
+
+    position:relative;
+    overflow:hidden;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.card:before{
+    
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:4px;
+    height:100%;
+    background-color:#E1BEE7;
+    transform:scaleY(1);
+    transition:all 0.5s;
+    transform-origin: bottom
+}
+
+.card:after{
+    
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:4px;
+    height:100%;
+    background-color:#8E24AA;
+    transform:scaleY(0);
+    transition:all 0.5s;
+    transform-origin: bottom
+}
+
+.card:hover::after{
+    transform:scaleY(1);
+}
+
+
+.fonts{
+    font-size:11px;
+}
+
+.social-list{
+    display:flex;
+    list-style:none;
+    justify-content:center;
+    padding:0;
+}
+
+.social-list li{
+    padding:10px;
+    color:#2f2a31;
+    font-size:19px;
+}
+
+/* Style untuk pop-up */
+#messagePopup {
+    display: none; /* Sembunyikan pop-up secara default */
+    position: fixed; /* Tetapkan posisi pop-up */
+    z-index: 1; /* Tetapkan indeks z untuk menempatkan pop-up di atas elemen lain */
+    left: 0;
+    top: 0;
+    width: 100%; /* Lebar pop-up mengikuti lebar layar */
+    height: 100%; /* Tinggi pop-up mengikuti tinggi layar */
+    overflow: auto; /* Aktifkan pengguliran jika konten pop-up melebihi ukuran layar */
+    background-color: rgba(0,0,0,0.4); /* Warna latar belakang transparan dengan opasitas 40% */
+}
+
+/* Style untuk konten pop-up */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Munculkan pop-up di tengah vertikal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Lebar konten pop-up */
+    max-width: 500px; /* Lebar maksimum konten pop-up */
+    position: relative; /* Tetapkan posisi relatif untuk dapat menerapkan posisi absolut pada elemen lain */
+}
+
+/* Style untuk tombol tutup (close) */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style responsif untuk formulir pesan */
+.modal-content{
+    background-color:rgb(104, 139, 219);
+}
+#messageForm {
+    max-width: 100%; /* Lebar maksimum formulir adalah lebar pop-up */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical; /* Memungkinkan pengguna untuk menyesuaikan ketinggian textarea */
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Style untuk tombol tutup (close) */
+.close {
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute; /* Tetapkan posisi absolut */
+    top: 0; /* Jarak dari atas */
+    right: 17px; /* Jarak dari kanan */
+    padding: 5px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(218, 19, 19);
+    text-decoration: none;
+}
+
